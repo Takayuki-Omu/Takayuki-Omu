@@ -119,7 +119,7 @@ span {
 .quiz {
   margin-top: 50px;
 }
-/* 画像のスタイル */
+
 img {
   max-width: 100%;
   height: auto;
@@ -140,6 +140,9 @@ img {
   color: #222222
 }
 
+a {
+  text-decoration: none;
+}
 
 /* レスポンシブデザインのスタイル */
 @media screen and (max-width: 600px) {
