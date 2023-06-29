@@ -11,7 +11,6 @@ main {
 h1 {
   font-size: 20px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
   padding-bottom: 8px;/*内側の余白*/
 }
 
