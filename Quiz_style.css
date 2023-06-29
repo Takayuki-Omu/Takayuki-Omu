@@ -1,0 +1,60 @@
+/*ファイルの文字コードを指定*/
+@charset "utf-8";
+body {
+  background-color: #fafafa;
+}
+main {
+  width: 320px;
+  margin: 32px auto 0;/* 上 | 左右 | 下 */
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;/*内側の余白*/
+}
+
+h2 {
+  font-size: 16px;
+  position: relative;
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 1em;
+  color: #454545;
+}
+
+h2:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #a8d4ff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+li {
+  cursor: pointer;/*クリックできることがわかるように*/
+  font-size: 16px;
+}
+
+.correct {
+  color: rgb(7, 133, 222);
+}
+
+.correct::after {
+  font-size: 14px;
+  content: " - 正解！🥳";
+}
+
+.wrong {
+  color: rgb(236, 142, 142);
+}
+
+.wrong::after {
+  font-size: 14px;
+  content: ' - ちがうよ😥';
+}
