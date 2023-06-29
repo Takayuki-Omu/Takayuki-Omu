@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;/*ブラウザのデフォルト値をリセット*/
+  padding: 0;/*ブラウザのデフォルト値をリセット*/
+}
+
+header {
+  background-color: #009999;
+  padding: 20px;
+  text-align: center;/*テキストを中央に配置*/
+}
+
+footer {
+  height: 50px;
+  background-color: #009999;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  color: white;
+  padding:5px;
+  margin: 0.1em auto 0.8em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+section {
+  padding: 20px 0px;
+}
+
+.introduction {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #222222
+}
+
+span {
+  background:linear-gradient(transparent 60%, #91d4d4 90%);
+}
+
+.product {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.product-title {
+  font-size: 20px;
+  color: #006666;/*文字色*/
+  background: #dff6f6;/*背景色*/
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-left: solid 5px #009999;/*左線（実線 太さ 色）*/
+  /* box-shadow: 1px 1px 5px gray;; */
+}
+
+.product-description {
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #222222
+}
+
+.Illustrated-title {
+  display:flex;
+  gap: 16px;
+  height: 50px;
+  color: #a9a9a9
+}
+.Illustrated-title > p {
+  flex:1;
+  text-align: center;
+  font-size: large;
+}
+
+.Illustrated {
+  display: flex;
+  gap: 16px;
+}
+
+.Illustrated > div {
+  flex: 1;
+  padding:10px;
+  border: 5px dotted #c0c0c0;
+}
+.inline {
+  flex: 1;
+  padding:10px;
+  border: 5px dotted #adadad;
+}
+.flex {
+  flex: 1;
+  padding:10px;
+  border: 5px dotted #adadad;
+  display: flex;
+  gap: 2px;
+}
+
+.Illustrated > div > p {
+  font-size: large;
+  color:#fff;
+  background-color: #a9a9a9;
+}
+.Illustrated > div > a {
+  font-size: large;
+  color:#fff;
+  background-color: #a9a9a9;
+}
+
+.quiz {
+  margin-top: 50px;
+}
+/* 画像のスタイル */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Chrome-extension {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 20px;
+  margin-top: 5px;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+}
+
+.Chrome-extension > p {
+  margin: 0;
+  color: #222222
+}
+
+
+/* レスポンシブデザインのスタイル */
+@media screen and (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+  
+  .introduction {
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+
+/* マウスホバーで写真のサイズを変える*/
+.gallery {
+  display: grid; /* グリッドを表示する */
+  gap: 0px; /* グリッドアイテム間のギャップを設定 */
+  width: 800px; /* 幅を設定 */
+  height: 400px; /* 高さを設定 */
+  grid-template-columns: repeat(5,auto); /* グリッドの列の数と幅を設定する "auto auto auto auto auto;"と同じ */
+}
+
+/* galleryクラスの子要素であるimgの設定 */
+.gallery > img {
+  width: 0; /* 子要素の初期状態を設定 */
+  height: 0; /* 子要素の初期状態を設定 */
+  min-height: 100%; /* 親要素.galleryのサイズに応じて高さを設定 */
+  min-width: 100%; /* 親要素.galleryのサイズに応じて幅を設定 */
+  object-fit: cover; /* アスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小 */
+  cursor: pointer; /* マウスポインターを変更する */
+  transition: .35s linear; /* アニメーションのトランジションを設定する */
+}
+
+/* マウスホバー時に画像のサイズを変更する */
+.gallery img:hover {
+  width: calc(100vh * 0.6); /* (ビューポートの高さ * スケールファクター)  */
+  height: calc(100vw * 0.6 / 5); /* (ビューポートの幅 * スケールファクター) / 行の数 */
+}
